@@ -1,4 +1,6 @@
 const board = document.getElementById('board');
+const victory = document.getElementById('victory');
+
 const boardSize = 4;
 let boardArray = [];
 
@@ -9,6 +11,17 @@ function toggleSquare(square) {
     else {
         square.classList.replace('dark', 'lit');
     }
+}
+
+function checkVictory() {
+    for (let i = 0; i < boardSize; i++) {
+        for (let j = 0; j < boardSize; j++) {
+            if (boardArray[i][j].classList.contains('lit')) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 function clickSquare(x, y) {
@@ -26,6 +39,10 @@ function clickSquare(x, y) {
     }
     if(y < boardSize - 1) {
         toggleSquare(boardArray[x][y + 1]);
+    }
+
+    if (checkVictory()) {
+        
     }
 }
 
