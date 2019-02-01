@@ -1,0 +1,22 @@
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 7%;
+    border: 3px solid black;
+    margin: 10px;
+    filter: drop-shadow(10px, 10px, 5px, black);
+}
+
+.lit {
+    background: rgb(238, 238, 173);   
+}
+
+.dark {
+    background: rgb(65, 65, 21);
+}
