@@ -42,7 +42,7 @@ function clickSquare(x, y) {
     }
 
     if (checkVictory()) {
-        
+        victory.textContent = 'You won!';
     }
 }
 
