@@ -1,11 +1,16 @@
 const board = document.getElementById('board');
 const victory = document.getElementById('victory');
+const resetButton = document.getElementById('reset');
 
 const boardSize = 4;
 let boardArray = [];
 
+function clickReset() {
+
+}
+
 function toggleSquare(square) {
-    if (square.classList.contains('lit')) {
+    if(square.classList.contains('lit')) {
         square.classList.replace('lit', 'dark');
     }
     else {
@@ -14,9 +19,9 @@ function toggleSquare(square) {
 }
 
 function checkVictory() {
-    for (let i = 0; i < boardSize; i++) {
-        for (let j = 0; j < boardSize; j++) {
-            if (boardArray[i][j].classList.contains('lit')) {
+    for(let i = 0; i < boardSize; i++) {
+        for(let j = 0; j < boardSize; j++) {
+            if(boardArray[i][j].classList.contains('lit')) {
                 return false;
             }
         }
@@ -43,6 +48,9 @@ function clickSquare(x, y) {
 
     if (checkVictory()) {
         victory.textContent = 'You won!';
+    }
+    else {
+        victory.textContent = '';
     }
 }
 
