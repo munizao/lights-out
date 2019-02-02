@@ -3,12 +3,10 @@ const victory = document.getElementById('victory');
 const resetButton = document.getElementById('reset');
 const sizeSelect = document.getElementById('size-select');
 
-let boardSize = 5;
+let boardSize = 4;
 let boardArray = [];
 
-function selectSize() {
-    
-}
+
 
 function clickReset() {
     for(let i = 0; i < boardSize; i++) {
@@ -84,5 +82,15 @@ function createSquares() {
     }
 }
 
+function selectSizeChanged() {
+    boardSize = parseInt(this.value);
+    // empty board
+    while(board.firstChild) {
+        board.removeChild(board.firstChild);
+    }
+    createSquares();
+}
+
 createSquares();
 resetButton.addEventListener('click', clickReset);
+sizeSelect.addEventListener('change', selectSizeChanged);
