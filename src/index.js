@@ -88,6 +88,7 @@ function selectSizeChanged() {
     while(board.firstChild) {
         board.removeChild(board.firstChild);
     }
+    boardArray = [];
     createSquares();
 }
 
