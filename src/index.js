@@ -2,7 +2,7 @@ const board = document.getElementById('board');
 const victory = document.getElementById('victory');
 const resetButton = document.getElementById('reset');
 
-const boardSize = 4;
+const boardSize = 5;
 let boardArray = [];
 
 function clickReset() {
@@ -12,6 +12,7 @@ function clickReset() {
             boardArray[i][j].classList.replace('dark', 'lit');
         } 
     }
+    victory.textContent = '';
 }
 
 function toggleSquare(square) {
