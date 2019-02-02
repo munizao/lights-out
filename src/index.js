@@ -1,9 +1,14 @@
 const board = document.getElementById('board');
 const victory = document.getElementById('victory');
 const resetButton = document.getElementById('reset');
+const sizeSelect = document.getElementById('size-select');
 
-const boardSize = 5;
+let boardSize = 5;
 let boardArray = [];
+
+function selectSize() {
+    
+}
 
 function clickReset() {
     for(let i = 0; i < boardSize; i++) {
