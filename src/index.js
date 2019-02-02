@@ -6,7 +6,12 @@ const boardSize = 4;
 let boardArray = [];
 
 function clickReset() {
-
+    for(let i = 0; i < boardSize; i++) {
+        for (let j = 0; j < boardSize; j++)
+        {
+            boardArray[i][j].classList.replace('dark', 'lit');
+        } 
+    }
 }
 
 function toggleSquare(square) {
@@ -46,7 +51,7 @@ function clickSquare(x, y) {
         toggleSquare(boardArray[x][y + 1]);
     }
 
-    if (checkVictory()) {
+    if(checkVictory()) {
         victory.textContent = 'You won!';
     }
     else {
@@ -74,3 +79,4 @@ function createSquares() {
 }
 
 createSquares();
+resetButton.addEventListener('click', clickReset);
