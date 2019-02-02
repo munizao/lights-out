@@ -20,3 +20,20 @@
 .dark {
     background: rgb(65, 65, 21);
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}
+
+#reset-section {
+    margin: auto;
+    text-align: center;
+}
