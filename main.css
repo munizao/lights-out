@@ -21,6 +21,10 @@
     background: rgb(65, 65, 21);
 }
 
+button {
+    font-size: 150%;
+}
+
 h1 {
     text-align: center;
 }
